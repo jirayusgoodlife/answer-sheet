@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "277125676234",
+    "firebase_url": "https://simple-answer-sheet.firebaseio.com",
+    "project_id": "simple-answer-sheet",
+    "storage_bucket": "simple-answer-sheet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277125676234:android:5ea76a02b2ad8d23c78833",
+        "android_client_info": {
+          "package_name": "io.github.jirayusgoodlife.answer_sheet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277125676234-or54emp3f9p2ibli46m6fdk41k657q7c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.github.jirayusgoodlife.answer_sheet",
+            "certificate_hash": "de4f810981931d59735e1be93adc5c0300a84695"
+          }
+        },
+        {
+          "client_id": "277125676234-6vb2rp99s6e7vqd4v6afnap2sha6o6hk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzk1i6xeCDefOr7ZrxTTAdqQ9nkBE7pnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277125676234-6vb2rp99s6e7vqd4v6afnap2sha6o6hk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

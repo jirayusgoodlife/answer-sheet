@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import DoExam from "@/views/DoExam";
+import Score from "@/views/Score";
 
 Vue.use(VueRouter)
 
@@ -12,9 +13,14 @@ const routes = [
     component: Home
   },
   {
-    path: '/do-exam/:',
+    path: '/do-exam',
     name: 'DoExam',
     component: DoExam
+  },
+  {
+    path: '/score',
+    name: 'Score',
+    component: Score
   }
 ]
 

@@ -47,9 +47,13 @@ export default {
         }
         this.timer = setInterval(() => {
           this.now = new Date()
-          if (this.negative)
+          if (this.negative){           
             return
+          }
           if (this.now > newVal) {
+            if(this.$store.state.is_take_reading){
+              this.$store.state.is_timeout = true 
+            }
             this.now = newVal
             this.$emit('endTime')
             clearInterval(this.timer)
@@ -58,7 +62,7 @@ export default {
       }
     }
   },
-  beforeDestroy() {
+  beforeDestroy() {    
     clearInterval(this.timer)
   }
 }

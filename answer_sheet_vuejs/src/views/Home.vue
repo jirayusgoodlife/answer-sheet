@@ -1,13 +1,4 @@
 <template>
-  <section class="hero is-fullheight">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <div class="column is-4 is-offset-4">
-          <div class="buttons are-medium is-justify-content-space-between is-hidden">
-            <a class="button is-primary">Create Room</a>
-            <a class="button is-info">Join Room</a>
-          </div>
-        </div>
         <div class="column is-4 is-offset-4">
           <table class="table is-bordered is-fullwidth is-hoverable">
               <thead>
@@ -16,11 +7,11 @@
                 <td></td>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>TOEIC no</td>
+                <tr v-for="(value, index) in exams" :key="index">
+                  <td>{{ index+1 }}</td>
+                  <td>{{ value.name }}</td>
                   <td>
-                    <a class="button is-small">
+                    <a class="button is-small" @click="takeExam(index)">
                       <span class="icon is-small">
                         <i class="fas fa-chevron-right"></i>
                       </span>
@@ -30,9 +21,6 @@
               </tbody>
           </table>
         </div>
-      </div>
-    </div>
-  </section>
 
 </template>
 
@@ -43,8 +31,23 @@ export default {
   components: {
 
   },
+  computed: {
+    exams() {
+      return this.$store.state.exams
+    }
+  },
+  methods: {
+    takeExam(index){
+      this.$store.dispatch('setExamId',index)            
+      this.$store.state.title =this.$store.state.exams[index]['name']
+      this.$store.dispatch('setKey',this.$store.state.exams[index]['key'])
+      this.$router.push('/do-exam')
+    }
+  },
   created(){
-
-  }
+    this.$store.state.is_show_back = false
+    this.$store.state.title = 'เลือกชุดข้อสอบ'
+    this.$store.dispatch('bindExams')
+  },
 }
 </script>

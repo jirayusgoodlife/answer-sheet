@@ -5,17 +5,17 @@
     </div>
     <div class="media-content">
       <div class="content">
-        <img :src="require('@/assets/img/A-Blank.png')" v-show="pick != 'a'" @click="pickValue('a')">
-        <img :src="require('@/assets/img/A-Full.png')" v-show="pick == 'a'">
+        <img :src="require('@/assets/img/A-Blank.png')" v-show="pick != 'A'" @click="pickValue('A')">
+        <img :src="require('@/assets/img/A-Full.png')" v-show="pick == 'A'">
         &nbsp;
-        <img :src="require('@/assets/img/B-Blank.png')" v-show="pick != 'b'" @click="pickValue('b')">
-        <img :src="require('@/assets/img/B-Full.png')" v-show="pick == 'b'">
+        <img :src="require('@/assets/img/B-Blank.png')" v-show="pick != 'B'" @click="pickValue('B')">
+        <img :src="require('@/assets/img/B-Full.png')" v-show="pick == 'B'">
         &nbsp;
-        <img :src="require('@/assets/img/C-Blank.png')" v-show="pick != 'c'" @click="pickValue('c')">
-        <img :src="require('@/assets/img/C-Full.png')" v-show="pick == 'c'">
+        <img :src="require('@/assets/img/C-Blank.png')" v-show="pick != 'C'" @click="pickValue('C')">
+        <img :src="require('@/assets/img/C-Full.png')" v-show="pick == 'C'">
         &nbsp;
-        <img :src="require('@/assets/img/D-Blank.png')" v-show="pick != 'd'" @click="pickValue('d')">
-        <img :src="require('@/assets/img/D-Full.png')" v-show="pick == 'd'">
+        <img :src="require('@/assets/img/D-Blank.png')" v-show="pick != 'D'" @click="pickValue('D')">
+        <img :src="require('@/assets/img/D-Full.png')" v-show="pick == 'D'">
       </div>
     </div>
     <div class="media-right">

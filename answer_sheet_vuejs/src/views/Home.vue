@@ -46,7 +46,7 @@ export default {
   },
   created(){
     this.$store.state.is_show_back = false
-    this.$store.state.title = 'เลือกชุดข้อสอบ'
+    this.$store.state.title = 'Select Exam'
     this.$store.dispatch('bindExams')
   },
 }

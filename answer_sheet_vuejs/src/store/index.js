@@ -51,6 +51,11 @@ export default new Vuex.Store({
                     return item.num === num
                 })[0].pick
             }
+        },
+        getKey(state) {
+            return (num) => {
+                return state.exam_keys[num-1]
+            }
         }
     },
     mutations: {

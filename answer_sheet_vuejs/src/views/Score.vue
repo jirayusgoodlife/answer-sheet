@@ -2,12 +2,10 @@
   <section class="section">
     <div class="container is-widescreen">
       <div class="columns">
-        <div class="column is-one-third"></div>
         <div class="column is-one-third has-text-centered">
-          <h2 class="is-size-2">Listening Scores : {{ 123 }}</h2>
-          <h2 class="is-size-2">Reading Scores : {{ 123 }}</h2>
+          <h2 class="is-size-2">Listening Scores : {{ listeningScore }} <span class="is-size-4">[ {{ $store.getters.getListeningCorrect }} point]</span></h2>
+          <h2 class="is-size-2">Reading Scores : {{ readingScore }} <span class="is-size-4">[ {{ $store.getters.getReadingCorrect }} point]</span></h2>
         </div>
-        <div class="column is-one-third"></div>
       </div>
       <hr />
       <div class="columns">
@@ -199,8 +197,21 @@ export default {
         { score: 3, listening: 5, reading: 5 },
         { score: 2, listening: 5, reading: 5 },
         { score: 1, listening: 5, reading: 5 },
+        { score: 0, listening: 0, reading: 0 },
       ],
     };
+  },
+  computed:{
+    listeningScore(){
+      return this.table_score.filter((item) => {
+          return item.score == this.$store.getters.getListeningCorrect
+      })[0].listening
+    },
+    readingScore(){
+      return this.table_score.filter((item) => {
+          return item.score == this.$store.getters.getReadingCorrect
+      })[0].reading
+    }
   },
   created() {
     if (this.$store.state.you_exams_id == null) {

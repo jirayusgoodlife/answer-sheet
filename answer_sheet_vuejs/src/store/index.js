@@ -56,6 +56,25 @@ export default new Vuex.Store({
             return (num) => {
                 return state.exam_keys[num-1]
             }
+        },
+       
+        getListeningCorrect(state, getters){
+            var sum = 0;
+            for(var i = 1; i <= 100; i++){
+                if(getters.getYouChoicePick(i) == getters.getKey(i)){
+                    sum++;
+                }
+            }
+            return sum;
+        } ,
+        getReadingCorrect(state, getters){
+            var sum = 0;
+            for(var i = 101; i <= 200; i++){
+                if(getters.getYouChoicePick(i) == getters.getKey(i)){
+                    sum++;
+                }
+            }
+            return sum;       
         }
     },
     mutations: {

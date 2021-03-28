@@ -2,7 +2,7 @@
   <section class="section">
     <div class="container is-widescreen">
       <div class="columns">
-        <div class="column is-one-third has-text-centered">
+        <div class="column has-text-centered">
           <h2 class="is-size-2">Listening Scores : {{ listeningScore }} <span class="is-size-4">[ {{ $store.getters.getListeningCorrect }} point]</span></h2>
           <h2 class="is-size-2">Reading Scores : {{ readingScore }} <span class="is-size-4">[ {{ $store.getters.getReadingCorrect }} point]</span></h2>
         </div>
